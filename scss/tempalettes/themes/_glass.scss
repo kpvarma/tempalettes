@@ -1,0 +1,67 @@
+@import "bootstrap/mixins";
+@import "tempalettes/mixins";
+
+/** Palette Classes **/
+.theme-glass .palette { min-height: 20px;padding: 10px;margin-bottom: 20px;background: transparent; }
+
+/** Palette Outer **/
+
+.theme-glass .palette-outer {color:#fff;}
+
+.contrast-light.theme-glass .palette-outer { background: rgba(255, 255, 255, .2);border:1px solid rgba(255, 255, 255, .2); }
+.contrast-light.theme-glass .palette-outer:hover, .contrast-light.theme-glass .palette-outer.selected { border:1px solid rgba(255, 255, 255, .4); }
+
+.contrast-dark.theme-glass .palette-outer { background: rgba(0, 0, 0, .4);border:1px solid rgba(0, 0, 0, .2); }
+.contrast-dark.theme-glass .palette-outer:hover, .contrast-light.theme-glass .palette-outer.selected { border:1px solid rgba(0, 0, 0, .9); }
+
+/** Palette Inner **/
+
+.theme-glass .palette-inner { background: rgba(255, 255, 255, .9);color:#4B4B4B; }
+.theme-glass .palette-inner:hover, .theme-glass .palette-inner.selected { background-color: #fff; }
+
+/** Palette Token **/
+
+.theme-glass .palette-token { background-color: rgba(255, 255, 255, .1);color:#fff; }
+.theme-glass .palette-token a { color:#fff !important}
+.theme-glass .palette-token:hover, .theme-glass .palette-token.selected { color:#fff; }
+
+.contrast-light.theme-glass .palette-token { background-color: rgba(255, 255, 255, .1); border:1px solid rgba(255, 255, 255, .1); }
+.contrast-dark.theme-glass .palette-token { background-color: rgba(0, 0, 0, .1); border:1px solid rgba(0, 0, 0, .1); }
+.contrast-light.theme-glass .palette-token:hover, .contrast-light.theme-glass .palette-token.selected  { background-color: rgba(255, 255, 255, .5); border:1px solid rgba(0, 0, 0, .1); }
+.contrast-dark.theme-glass .palette-token:hover, .contrast-light.theme-glass .palette-token.selected { background-color: rgba(0, 0, 0, .5); border:1px solid rgba(255, 255, 255, .5); }
+
+/** Palette Topup Classes **/
+
+.theme-glass .palette-shadow { -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+.theme-glass .palette-rounded { -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; }
+.theme-glass .palette-bordered { border: 1px solid #E3E3E3; }
+
+.theme-glass .palette > h1, .theme-glass .palette > h2, .theme-glass .palette > h3, .theme-glass .palette > h4, .theme-glass .palette > h5, .theme-glass .palette > h6 { margin: 10px 0; font-family: inherit; font-weight: bold; line-height: 20px; color: #FFF; text-rendering: optimizelegibility; text-align:left; border-bottom:1px solid #c1c1c1; padding-bottom:20px; }
+.theme-glass .palette > h4, .theme-glass .palette > h5, .theme-glass .palette > h6 { padding-bottom:10px; }
+.theme-glass .palette-inner > h1, .theme-glass .palette-inner > h2, .theme-glass .palette-inner > h3, .theme-glass .palette-inner > h4, .theme-glass .palette-inner > h5, .theme-glass .palette-inner > h6 { color: #4b4b4b; }
+
+.theme-glass .palette a:not(.close):not(.escape-color)	{color:#08C;font-weight:bold;}
+.theme-glass .palette a:not(.close):not(.escape-color):hover {color:#005580;}
+
+.theme-glass .palette a.title {font-size:18px;}
+.theme-glass .palette a.sub-title {font-size:16px;} 
+
+.theme-glass .palette a.small-title {font-size:14px;}
+.theme-glass .palette a.small-sub-title {font-size:13px;}
+.theme-glass .palette a.tiny-title {font-size:12px;}
+
+.theme-glass .palette .description {color:#4b4b4b;margin:0px;}
+.theme-glass .palette .description > a.read-more {font-size:11px;float:right;}
+
+.theme-glass .palette a.author {color:brown;font-weight:bold !important}
+.theme-glass .palette .time, .theme-glass .palette .date, .theme-glass .palette .time-ago, .theme-glass .palette .date-time, .theme-glass .palette .display-time {color:#898989;}
+
+.theme-glass .palette a.right-heading-link {float:right;color:#fff;font-style:underline; font-size:11px;}
+
+/* Overriding simple form css for forms */
+.theme-glass .palette .form-horizontal .control-group {margin-bottom:10px;}
+.theme-glass .palette .form-horizontal .help-block {text-align:right;color:#C1C1C1;}
+.control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline { color: #ce817f; }
+.theme-glass .palette .form-horizontal .help-block {text-align:right;color:#C1C1C1;}
+.theme-glass .palette .form-horizontal .controls input{width:90%;}
+.theme-glass .palette .form-horizontal .control-label{color:#FFF;}

@@ -1,0 +1,223 @@
+@import "tempalettes/variables";
+@import "bootstrap/mixins";
+@import "tempalettes/mixins";
+
+/* backdrop holder class classes for both picture and pattern */
+
+#backdrop-holder {  
+	@include background-size(cover);
+	background: {
+		repeat: no-repeat;
+/*		color: inherit;*/
+	}
+	min-height:$pageMinHeight;
+	position:fixed;
+	width:100%;
+	z-index:-1;
+}
+
+/* Picture based backdrops */
+
+.backdrop-picture-mountains {
+	@include linear-gradient(#0066cc, #0066cc);
+	background-image: url(#{$imagesPath}/backdrops/pictures/mountains.jpg);
+}
+.backdrop-picture-wood {
+	@include linear-gradient(#663300, #000000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/wood.jpg);
+}
+.backdrop-picture-beach {
+	@include linear-gradient(#0099cc, #cccccc);
+	background-image: url(#{$imagesPath}/backdrops/pictures/beach.jpg);
+}
+.backdrop-picture-ocean {
+	@include linear-gradient(#3399cc, #99ccff);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ocean.jpg);
+}
+.backdrop-picture-treetops {
+	@include linear-gradient(#6699cc, #006699);
+	background-image: url(#{$imagesPath}/backdrops/pictures/treetops.jpg);
+}
+.backdrop-picture-desk {
+	@include linear-gradient(#563b26, #663333);
+	background-image: url(#{$imagesPath}/backdrops/pictures/desk.jpg);
+}
+.backdrop-picture-turf {
+	@include linear-gradient(#339900, #336600);
+	background-image: url(#{$imagesPath}/backdrops/pictures/turf.jpg);
+}
+.backdrop-picture-grafitti {
+	@include linear-gradient(#000000, #000000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/grafitti.jpg);
+}
+.backdrop-picture-pebbles {
+	@include linear-gradient(#666666, #333333);
+	background-image: url(#{$imagesPath}/backdrops/pictures/pebbles.jpg);
+}
+.backdrop-picture-venus {
+	@include linear-gradient(#000, #000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/venus.jpg);
+}
+.backdrop-picture-octopus {
+	@include linear-gradient(#000, #000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/octopus.jpg);
+}
+.backdrop-picture-ruby {
+	@include linear-gradient(#990000, #990000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ruby.jpg);
+}
+.backdrop-picture-apple {
+	@include linear-gradient(#333333, #333333);
+	background-image: url(#{$imagesPath}/backdrops/pictures/apple.jpg);
+}
+.backdrop-picture-ror1 {
+	@include linear-gradient(#000033, #000033);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ror1.jpg);
+}
+.backdrop-picture-ror2 {
+	@include linear-gradient(#990033, #990033);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ror2.jpg);
+}
+.backdrop-picture-ror3 {
+	@include linear-gradient(#000, #000);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ror3.jpg);
+}
+.backdrop-picture-ror4 {
+	@include linear-gradient(#3366cc, #3366cc);
+	background-image: url(#{$imagesPath}/backdrops/pictures/ror4.jpg);
+}
+
+/* Add a new image based theme here.
+	.backdrop-picture-name {
+		@include linear-gradient(#topColor, #botomColor);
+		background-image: url(#{$imagesPath}/backdrops/pictures/image-name.jpg);
+	}
+ Don't forget to add the image to the above mentioned folder.
+ Now you can use
+	<body class="backdrop-picture theme-default">
+		<div id="backdrop-holder" class="backdrop-picture-image-name">
+			Content Goes here.
+		</div>
+	</body>
+*/
+
+/* Pattern based backdrops */
+
+.backdrop-pattern #backdrop-holder::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0.1;
+}
+
+/*[class*="backdrop-pattern-preview-"] { opacity: 0.1; }*/
+
+.backdrop-pattern .backdrop-pattern-01::after, .backdrop-pattern-preview-01::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/01.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-02::after, .backdrop-pattern-preview-02::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/02.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-03::after, .backdrop-pattern-preview-03::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/03.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-04::after, .backdrop-pattern-preview-04::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/04.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-05::after, .backdrop-pattern-preview-05::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/05.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-06::after, .backdrop-pattern-preview-06::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/06.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-07::after, .backdrop-pattern-preview-07::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/07.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-08::after, .backdrop-pattern-preview-08::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/08.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-09::after, .backdrop-pattern-preview-09::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/09.png) repeat center center;
+}
+.backdrop-pattern .backdrop-pattern-10::after, .backdrop-pattern-preview-10::after {
+	content: '';
+	background: url(#{$imagesPath}/backdrops/patterns/10.png) repeat center center;
+}
+/* Add a new dark colored gradient themes here.
+.backdrop-pattern .backdrop-pattern-xxxx::after, .backdrop-pattern-preview-xxxx::after {
+		content: '';
+		background: url(#{$imagesPath}/backdrops/patterns/xxxx.png) repeat center center;
+	}
+ Now you can use 
+	<body class="backdrop-pattern theme-default">
+		<div id="backdrop-holder" class="backdrop-pattern-xxxx backdrop-pattern-some-shade">
+			Content Goes here.
+		</div>
+	</body>
+*/
+
+.backdrop-shade-bootstrap-violet, .backdrop-shade-preview-bootstrap-violet { background-color:#6d3353; @include gradient-directional($startColor: #020031, $endColor: #6d3353, $deg: 45deg);}
+.backdrop-shade-olive-green, .backdrop-shade-preview-olive-green { background-color:darkOliveGreen; @include gradient-directional($startColor: darkOliveGreen, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-goldern-red, .backdrop-shade-preview-goldern-red { background-color:darkgoldenrod; @include gradient-directional($startColor: darkgoldenrod, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-green, .backdrop-shade-preview-dark-green  { background-color:darkGreen; @include gradient-directional($startColor: darkGreen, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-red, .backdrop-shade-preview-dark-red 		{ background-color:darkRed; @include gradient-directional($startColor: darkRed, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-salmon, .backdrop-shade-preview-dark-salmon { background-color:darkSalmon; @include gradient-directional($startColor: darkSalmon, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-grey, .backdrop-shade-preview-dark-grey   { background-color:darkGray; @include gradient-directional($startColor: darkGray, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-slate-grey, .backdrop-shade-preview-slate-grey { background-color:SlateGrey; @include gradient-directional($startColor: SlateGrey, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-slate-grey , .backdrop-shade-preview-dark-slate-grey { background-color:darkSlateGrey; @include gradient-directional($startColor: darkSlateGrey, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-light-slate-grey, .backdrop-shade-preview-light-slate-grey { background-color:lightSlateGrey; @include gradient-directional($startColor: lightSlateGrey, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dim-grey, .backdrop-shade-preview-dim-grey { background-color:dimGrey; @include gradient-directional($startColor: dimGrey, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-steel-blue, .backdrop-shade-preview-steel-blue { background-color:steelBlue; @include gradient-directional($startColor: steelBlue, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-dark-steel-blue, .backdrop-shade-preview-dark-steel-blue { background-color:darkSteelBlue; @include gradient-directional($startColor: darkSteelBlue, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-light-steel-blue, .backdrop-shade-preview-light-steel-blue { background-color:lightSteelBlue; @include gradient-directional($startColor: lightSteelBlue, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-cadet-blue, .backdrop-shade-preview-cadet-blue { background-color:cadetBlue; @include gradient-directional($startColor: cadetBlue, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-brown, .backdrop-shade-preview-brown { background-color:brown; @include gradient-directional($startColor: brown, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-maroon, .backdrop-shade-preview-maroon { background-color:maroon; @include gradient-directional($startColor: maroon, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-forest-green, .backdrop-shade-preview-forest-green { background-color:forestGreen; @include gradient-directional($startColor: forestGreen, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-peru, .backdrop-shade-preview-peru { background-color:peru; @include gradient-directional($startColor: peru, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-olive, .backdrop-shade-preview-olive { background-color:olive; @include gradient-directional($startColor: olive, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-olive-rab, .backdrop-shade-preview-olive-rab { background-color:oliveRab; @include gradient-directional($startColor: oliveRab, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-indian-red, .backdrop-shade-preview-indian-red { background-color:indianRed; @include gradient-directional($startColor: indianRed, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-fire-brick, .backdrop-shade-preview-fire-brick { background-color:fireBrick; @include gradient-directional($startColor: fireBrick, $endColor: #fff, $deg: 45deg);}
+.backdrop-shade-white-smoke, .backdrop-shade-preview-white-smoke { background-color:whiteSmoke; @include gradient-directional($startColor: whiteSmoke, $endColor: #fff, $deg: 45deg);}
+
+/* Add a new dark colored gradient themes here.
+ .backdrop-shade-some-shade { background-color:some-shade;}
+ 	
+	1.Now you can use without pattern or picture
+	<body class="theme-default">
+		<div id="backdrop-holder" class="backdrop-shade-olive-green">
+			Content Goes here.
+		</div>
+	</body>
+	
+	2.Now you can use with pattern
+	<body class="backgrop-pattern backdrop-pattern-01 theme-default">
+		<div id="backdrop-holder" class="backdrop-shade-olive-green">
+			Content Goes here.
+		</div>
+	</body>
+	
+	3.Now you can use with picture as a fallback background color
+	<body class="backdrop-picture theme-default">
+		<div id="backdrop-holder" class="backdrop-shade-olive-green backdrop-picture-mountains">
+			Content Goes here.
+		</div>
+	</body>
+*/
+
+
+

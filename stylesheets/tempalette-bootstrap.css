@@ -1,0 +1,47 @@
+/*Overrides Bootstrap Styles for supporting palettes*/
+/* Variable Defenitions */
+/* navbar overides */
+.navbar {
+  font-size: 13px; }
+
+.nav-tabs > li > a {
+  background-color: #fff; }
+
+/*.nav-tabs > li.active > a { background-color:#4b4b4b; color:#fff;}*/
+/* Overiding glyphicons image paths*/
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url(../images/glyphicons-halflings.png); }
+
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: url(../images/glyphicons-halflings-white.png); }
+
+.sidebar-nav {
+  padding: 9px 0; }
+
+/* Header */
+.navbar-inverse {
+  color: #414141; }
+
+.navbar-inverse .navbar-inner {
+  background-color: #070707;
+  background-image: -moz-linear-gradient(top, #070707, #414141);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#070707), to(#414141));
+  background-image: -webkit-linear-gradient(top, #070707, #414141);
+  background-image: -o-linear-gradient(top, #070707, #414141);
+  background-image: linear-gradient(to bottom, #070707, #414141);
+  background-repeat: repeat-x;
+  border-color: #898989;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#070707',endColorstr='#414141',GradientType=0); }
