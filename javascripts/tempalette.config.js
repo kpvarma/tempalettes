@@ -55,7 +55,7 @@ tempalette = {
 								"white-smoke": {"pattern": "06", "shade": "white-smoke", "theme": "default"}
 								
 							},
-		thumbnailImageSourceFolder: "/images/backdrops/pictures",
+		thumbnailImageSourceFolder: "images/backdrops/pictures",
     
 		loadTheme: function(){
 			var currentBackgroundThemeClass = "theme-" + this.currentBackgroundTheme;
