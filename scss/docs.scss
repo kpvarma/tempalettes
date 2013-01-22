@@ -1,5 +1,53 @@
+@import "tempalettes/variables";
+
+.jumbotron {
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+	background: #020031;
+	background: -moz-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353));
+	background: -webkit-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: -o-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: -ms-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 );
+	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.jumbotron::after {
+	content: '';
+	display: block;
+	position: relative;
+	background: url(#{$imagesPath}/backdrops/patterns/03.png) repeat center center;
+	opacity: .4;
+}
+
 /* Docs Home CSS Styles
 ------------------------- */
+
+/* Overriding the pre tag styles defined in bootstrap */
+pre {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	line-height: 20px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: transparent;
+	border: 0px solid #cccccc;
+	border: 0px solid rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
 
 .chapter-intro {
   padding: 70px 0 80px;
