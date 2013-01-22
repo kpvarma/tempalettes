@@ -1,0 +1,7 @@
+*.sassc
+.sass-cache
+/log/*
+*.log
+/tmp/*
+**.orig
+.DS_Store
