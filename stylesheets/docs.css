@@ -21,7 +21,7 @@
   content: '';
   display: block;
   position: relative;
-  background: url(/images/backdrops/patterns/03.png) repeat center center;
+  background: url(../images/backdrops/patterns/03.png) repeat center center;
   opacity: .4; }
 
 /* Docs Home CSS Styles

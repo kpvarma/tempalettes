@@ -21,7 +21,7 @@
   background-image: -ms-linear-gradient(top, #0066cc, #0066cc);
   background-image: -o-linear-gradient(top, #0066cc, #0066cc);
   background-image: linear-gradient(top, bottom, #0066cc, #0066cc);
-  background-image: url(/images/backdrops/pictures/mountains.jpg); }
+  background-image: url(../images/backdrops/pictures/mountains.jpg); }
 
 .backdrop-picture-wood {
   background-color: black;
@@ -31,7 +31,7 @@
   background-image: -ms-linear-gradient(top, #663300, black);
   background-image: -o-linear-gradient(top, #663300, black);
   background-image: linear-gradient(top, bottom, #663300, black);
-  background-image: url(/images/backdrops/pictures/wood.jpg); }
+  background-image: url(../images/backdrops/pictures/wood.jpg); }
 
 .backdrop-picture-beach {
   background-color: #cccccc;
@@ -41,7 +41,7 @@
   background-image: -ms-linear-gradient(top, #0099cc, #cccccc);
   background-image: -o-linear-gradient(top, #0099cc, #cccccc);
   background-image: linear-gradient(top, bottom, #0099cc, #cccccc);
-  background-image: url(/images/backdrops/pictures/beach.jpg); }
+  background-image: url(../images/backdrops/pictures/beach.jpg); }
 
 .backdrop-picture-ocean {
   background-color: #99ccff;
@@ -51,7 +51,7 @@
   background-image: -ms-linear-gradient(top, #3399cc, #99ccff);
   background-image: -o-linear-gradient(top, #3399cc, #99ccff);
   background-image: linear-gradient(top, bottom, #3399cc, #99ccff);
-  background-image: url(/images/backdrops/pictures/ocean.jpg); }
+  background-image: url(../images/backdrops/pictures/ocean.jpg); }
 
 .backdrop-picture-treetops {
   background-color: #006699;
@@ -61,7 +61,7 @@
   background-image: -ms-linear-gradient(top, #6699cc, #006699);
   background-image: -o-linear-gradient(top, #6699cc, #006699);
   background-image: linear-gradient(top, bottom, #6699cc, #006699);
-  background-image: url(/images/backdrops/pictures/treetops.jpg); }
+  background-image: url(../images/backdrops/pictures/treetops.jpg); }
 
 .backdrop-picture-desk {
   background-color: #663333;
@@ -71,7 +71,7 @@
   background-image: -ms-linear-gradient(top, #563b26, #663333);
   background-image: -o-linear-gradient(top, #563b26, #663333);
   background-image: linear-gradient(top, bottom, #563b26, #663333);
-  background-image: url(/images/backdrops/pictures/desk.jpg); }
+  background-image: url(../images/backdrops/pictures/desk.jpg); }
 
 .backdrop-picture-turf {
   background-color: #336600;
@@ -81,7 +81,7 @@
   background-image: -ms-linear-gradient(top, #339900, #336600);
   background-image: -o-linear-gradient(top, #339900, #336600);
   background-image: linear-gradient(top, bottom, #339900, #336600);
-  background-image: url(/images/backdrops/pictures/turf.jpg); }
+  background-image: url(../images/backdrops/pictures/turf.jpg); }
 
 .backdrop-picture-grafitti {
   background-color: black;
@@ -91,7 +91,7 @@
   background-image: -ms-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(top, bottom, black, black);
-  background-image: url(/images/backdrops/pictures/grafitti.jpg); }
+  background-image: url(../images/backdrops/pictures/grafitti.jpg); }
 
 .backdrop-picture-pebbles {
   background-color: #333333;
@@ -101,7 +101,7 @@
   background-image: -ms-linear-gradient(top, #666666, #333333);
   background-image: -o-linear-gradient(top, #666666, #333333);
   background-image: linear-gradient(top, bottom, #666666, #333333);
-  background-image: url(/images/backdrops/pictures/pebbles.jpg); }
+  background-image: url(../images/backdrops/pictures/pebbles.jpg); }
 
 .backdrop-picture-venus {
   background-color: black;
@@ -111,7 +111,7 @@
   background-image: -ms-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(top, bottom, black, black);
-  background-image: url(/images/backdrops/pictures/venus.jpg); }
+  background-image: url(../images/backdrops/pictures/venus.jpg); }
 
 .backdrop-picture-octopus {
   background-color: black;
@@ -121,7 +121,7 @@
   background-image: -ms-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(top, bottom, black, black);
-  background-image: url(/images/backdrops/pictures/octopus.jpg); }
+  background-image: url(../images/backdrops/pictures/octopus.jpg); }
 
 .backdrop-picture-ruby {
   background-color: #990000;
@@ -131,7 +131,7 @@
   background-image: -ms-linear-gradient(top, #990000, #990000);
   background-image: -o-linear-gradient(top, #990000, #990000);
   background-image: linear-gradient(top, bottom, #990000, #990000);
-  background-image: url(/images/backdrops/pictures/ruby.jpg); }
+  background-image: url(../images/backdrops/pictures/ruby.jpg); }
 
 .backdrop-picture-apple {
   background-color: #333333;
@@ -141,7 +141,7 @@
   background-image: -ms-linear-gradient(top, #333333, #333333);
   background-image: -o-linear-gradient(top, #333333, #333333);
   background-image: linear-gradient(top, bottom, #333333, #333333);
-  background-image: url(/images/backdrops/pictures/apple.jpg); }
+  background-image: url(../images/backdrops/pictures/apple.jpg); }
 
 .backdrop-picture-ror1 {
   background-color: #000033;
@@ -151,7 +151,7 @@
   background-image: -ms-linear-gradient(top, #000033, #000033);
   background-image: -o-linear-gradient(top, #000033, #000033);
   background-image: linear-gradient(top, bottom, #000033, #000033);
-  background-image: url(/images/backdrops/pictures/ror1.jpg); }
+  background-image: url(../images/backdrops/pictures/ror1.jpg); }
 
 .backdrop-picture-ror2 {
   background-color: #990033;
@@ -161,7 +161,7 @@
   background-image: -ms-linear-gradient(top, #990033, #990033);
   background-image: -o-linear-gradient(top, #990033, #990033);
   background-image: linear-gradient(top, bottom, #990033, #990033);
-  background-image: url(/images/backdrops/pictures/ror2.jpg); }
+  background-image: url(../images/backdrops/pictures/ror2.jpg); }
 
 .backdrop-picture-ror3 {
   background-color: black;
@@ -171,7 +171,7 @@
   background-image: -ms-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(top, bottom, black, black);
-  background-image: url(/images/backdrops/pictures/ror3.jpg); }
+  background-image: url(../images/backdrops/pictures/ror3.jpg); }
 
 .backdrop-picture-ror4 {
   background-color: #3366cc;
@@ -181,12 +181,12 @@
   background-image: -ms-linear-gradient(top, #3366cc, #3366cc);
   background-image: -o-linear-gradient(top, #3366cc, #3366cc);
   background-image: linear-gradient(top, bottom, #3366cc, #3366cc);
-  background-image: url(/images/backdrops/pictures/ror4.jpg); }
+  background-image: url(../images/backdrops/pictures/ror4.jpg); }
 
 /* Add a new image based theme here.
 	.backdrop-picture-name {
 		@include linear-gradient(#topColor, #botomColor);
-		background-image: url(/images/backdrops/pictures/image-name.jpg);
+		background-image: url(../images/backdrops/pictures/image-name.jpg);
 	}
  Don't forget to add the image to the above mentioned folder.
  Now you can use
@@ -210,48 +210,48 @@
 /*[class*="backdrop-pattern-preview-"] { opacity: 0.1; }*/
 .backdrop-pattern .backdrop-pattern-01::after, .backdrop-pattern-preview-01::after {
   content: '';
-  background: url(/images/backdrops/patterns/01.png) repeat center center; }
+  background: url(../images/backdrops/patterns/01.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-02::after, .backdrop-pattern-preview-02::after {
   content: '';
-  background: url(/images/backdrops/patterns/02.png) repeat center center; }
+  background: url(../images/backdrops/patterns/02.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-03::after, .backdrop-pattern-preview-03::after {
   content: '';
-  background: url(/images/backdrops/patterns/03.png) repeat center center; }
+  background: url(../images/backdrops/patterns/03.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-04::after, .backdrop-pattern-preview-04::after {
   content: '';
-  background: url(/images/backdrops/patterns/04.png) repeat center center; }
+  background: url(../images/backdrops/patterns/04.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-05::after, .backdrop-pattern-preview-05::after {
   content: '';
-  background: url(/images/backdrops/patterns/05.png) repeat center center; }
+  background: url(../images/backdrops/patterns/05.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-06::after, .backdrop-pattern-preview-06::after {
   content: '';
-  background: url(/images/backdrops/patterns/06.png) repeat center center; }
+  background: url(../images/backdrops/patterns/06.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-07::after, .backdrop-pattern-preview-07::after {
   content: '';
-  background: url(/images/backdrops/patterns/07.png) repeat center center; }
+  background: url(../images/backdrops/patterns/07.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-08::after, .backdrop-pattern-preview-08::after {
   content: '';
-  background: url(/images/backdrops/patterns/08.png) repeat center center; }
+  background: url(../images/backdrops/patterns/08.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-09::after, .backdrop-pattern-preview-09::after {
   content: '';
-  background: url(/images/backdrops/patterns/09.png) repeat center center; }
+  background: url(../images/backdrops/patterns/09.png) repeat center center; }
 
 .backdrop-pattern .backdrop-pattern-10::after, .backdrop-pattern-preview-10::after {
   content: '';
-  background: url(/images/backdrops/patterns/10.png) repeat center center; }
+  background: url(../images/backdrops/patterns/10.png) repeat center center; }
 
 /* Add a new dark colored gradient themes here.
 .backdrop-pattern .backdrop-pattern-xxxx::after, .backdrop-pattern-preview-xxxx::after {
 		content: '';
-		background: url(/images/backdrops/patterns/xxxx.png) repeat center center;
+		background: url(../images/backdrops/patterns/xxxx.png) repeat center center;
 	}
  Now you can use 
 	<body class="backdrop-pattern theme-default">
