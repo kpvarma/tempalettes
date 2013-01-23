@@ -11,7 +11,7 @@
 /* Overiding glyphicons image paths*/
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url(/images/glyphicons-halflings.png); }
+  background-image: url(../images/glyphicons-halflings.png); }
 
 .icon-white,
 .nav-pills > .active > a > [class^="icon-"],
@@ -26,7 +26,7 @@
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url(/images/glyphicons-halflings-white.png); }
+  background-image: url(../images/glyphicons-halflings-white.png); }
 
 .sidebar-nav {
   padding: 9px 0; }
