@@ -119,47 +119,81 @@
 .backdrop-pattern .backdrop-pattern-01::after, .backdrop-pattern-preview-01::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/01.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-02::after, .backdrop-pattern-preview-02::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/02.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-03::after, .backdrop-pattern-preview-03::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/03.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-04::after, .backdrop-pattern-preview-04::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/04.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-05::after, .backdrop-pattern-preview-05::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/05.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-06::after, .backdrop-pattern-preview-06::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/06.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-07::after, .backdrop-pattern-preview-07::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/07.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-08::after, .backdrop-pattern-preview-08::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/08.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-09::after, .backdrop-pattern-preview-09::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/09.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
 .backdrop-pattern .backdrop-pattern-10::after, .backdrop-pattern-preview-10::after {
 	content: '';
 	background: url(#{$imagesPath}/backdrops/patterns/10.png) repeat center center;
+	display: block;
+	opacity: 0.1;
+	height: 100%;
 }
+
 /* Add a new dark colored gradient themes here.
 .backdrop-pattern .backdrop-pattern-xxxx::after, .backdrop-pattern-preview-xxxx::after {
 		content: '';
 		background: url(#{$imagesPath}/backdrops/patterns/xxxx.png) repeat center center;
+		display: block;
+		opacity: 0.1;
+		height: 100%;
 	}
  Now you can use 
 	<body class="backdrop-pattern theme-default">
