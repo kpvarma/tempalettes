@@ -8,17 +8,20 @@ $(document).ready(function(){
 	
 	// Bind functions for select button to load themes.
 	$(".select-theme:not(.disabled)").on("click", function() {
-		if($(this).data("bundle")){
-			console.log("data(bundle): " + $(this).data("bundle"));
-			tempalette.loadBundle($(this).data("bundle"));
+		bundleName = $(this).data("bundle");
+		if(bundleName){
+			var bundle = tempalette.bundles[bundleName];
+	  	tempalette.loadBundle(bundleName, bundle);
 		}
 	  return false;
 	});
 	
 	// Bind functions for select button to load themes.
 	$(".preview-theme:not(.disabled)").on("click", function() {
-		if($(this).data("theme-bundle")){
-	  	tempalette.loadBundle($(this).data("bundle"), null, true);
+		bundleName = $(this).data("bundle");
+		if(bundleName){
+			var bundle = tempalette.bundles[bundleName];
+	  	tempalette.loadBundle(bundleName, bundle, true);
 		}
 	  return false;
 	});

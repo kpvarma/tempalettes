@@ -105,7 +105,6 @@ tempaletteRenderer = {
 
 		var thumbnailSpanHolder = this.createAnElement('div', {"class":"span4", "style":"margin-left:0px;"});
 		var thumbnailDiv = this.createAnElement('div', {"id": "backdrop-preview-01", "class":"thumbnail margin-5"});
-		var themeDisplayName = this.getThemeDisplayName(theme, type, shade, pattern, picture);
 		
 		// Load the values from the bundle (cloning using jquery.extend)
 		var bundle = jQuery.extend(true, {}, tempalette.bundles[bundleName]);
@@ -115,18 +114,12 @@ tempaletteRenderer = {
 		var pattern = bundle["pattern"];
 		var picture = bundle["picture"];
 		
-		// console.log("bundle: ");
-		// 	console.log(bundle);
-		// 	
-		// 	console.log("theme: " + theme);
-		// 	console.log("type: " + type);
-		// 	console.log("shade: " + shade);
-		// 	console.log("pattern: " + pattern);
-		// 	console.log("picture: " + picture);
+		var themeDisplayName = this.getThemeDisplayName(theme, type, shade, pattern, picture);
 		
 		if(themeDisplayName.length > 16){
 			themeDisplayName = themeDisplayName.slice(0,16) + " ..";
 		}
+		
 		if(type == "picture"){
 			var thumbnailImageSource = tempalette.thumbnailImageSourceFolder + "/thumb-" + picture + ".jpg";
 			var thumbnailImage = this.createAnElement('img', {"src":thumbnailImageSource, "alt":themeDisplayName, "data-bundle":bundleName});

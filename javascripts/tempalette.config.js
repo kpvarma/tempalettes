@@ -94,15 +94,15 @@ tempalette = {
 				overrides = {};
 			}
 			
-			console.log("bundleName: " + bundleName);
-			console.log("preview: " + preview);
-			console.log("overrides: ");
-			console.log(overrides);
+			// console.log("bundleName: " + bundleName);
+			// console.log("preview: " + preview);
+			// console.log("overrides: ");
+			// console.log(overrides);
 			
 			// The precendence is bundleName > urlParameter > cookie > DefaultBundleName
 			this.currentBackgroundBundleName = bundleName || tempaletteUtilities.getURLParameter("tempalette-bundle") || tempaletteUtilities.getTempaletteCookie("tempalette-bundle") || this.defaultBackgroundBundleName;
 			
-			console.log("this.currentBackgroundBundleName: " + this.currentBackgroundBundleName);
+			// console.log("this.currentBackgroundBundleName: " + this.currentBackgroundBundleName);
 			
 			// You can override the use of a bundle by setting a cookie or url
 			// The precendence is overrides["value"] > urlParameter["value"] > cookie["value"] > bundle["value"] > defaultValue
@@ -111,20 +111,20 @@ tempalette = {
 			this.currentBackgroundBundle = this.bundles[this.currentBackgroundBundleName];
 			var bundle = jQuery.extend(true, {}, this.currentBackgroundBundle);
 			
-			console.log("bundle: ");
-			console.log(bundle);
+			// console.log("bundle: ");
+			// console.log(bundle);
 			
 			// Override the values if cookie is set
 			var bundle = this.loadValuesCookie(bundle);
 			
-			console.log("loadValuesCookie: ");
-			console.log(bundle);
+			// console.log("loadValuesCookie: ");
+			// console.log(bundle);
 			
 			// Override the values if url parameter is set
 			var bundle = this.loadValuesUrlParameters(bundle);
 			
-			console.log("loadValuesUrlParameters: ");
-			console.log(bundle);
+			// console.log("loadValuesUrlParameters: ");
+			// console.log(bundle);
 			
 			// Override the values if a custom override object is passed to this function
 			if(overrides["theme"]){
@@ -133,62 +133,97 @@ tempalette = {
 			if(overrides["type"] ){
 				bundle["type"] = overrides["type"];
 			}
-			if(overrides["picture"] ){
+			if(overrides["type"] == "picture" && overrides["picture"] ){
 				bundle["picture"] = overrides["picture"];
 			}
-			if(overrides["pattern"] ){
+			if(overrides["pattern"] == "picture" && overrides["pattern"] ){
 				bundle["pattern"] = overrides["pattern"];
 			}
 			if(overrides["shade"] ){
 				bundle["shade"] = overrides["shade"];
 			}
 			
-			console.log("overrides: ");
-			console.log(bundle);
+			// console.log("overrides: ");
+			// console.log(bundle);
 			
-			//var selectedTheme = overrides["theme"] || tempaletteUtilities.getURLParameter("tempalette-theme") || tempaletteUtilities.getTempaletteCookie("tempalette-theme") || this.bundles[value]["theme"] || this.currentBackgroundTheme;
-			//var selectedType = overrides["type"] || tempaletteUtilities.getURLParameter("tempalette-type") || tempaletteUtilities.getTempaletteCookie("tempalette-type") || this.bundles[value]["type"] || this.currentBackgroundType;
-			//var selectedPicture = overrides["picture"] || tempaletteUtilities.getURLParameter("tempalette-picture") || tempaletteUtilities.getTempaletteCookie("tempalette-picture") || this.bundles[value]["picture"] || this.currentBackgroundPicture;
-			//var selectedPattern = overrides["pattern"] || tempaletteUtilities.getURLParameter("tempalette-pattern") || tempaletteUtilities.getTempaletteCookie("tempalette-pattern") || this.bundles[value]["pattern"] || this.currentBackgroundPattern;
-			//var selectedShade = overrides["shade"] || tempaletteUtilities.getURLParameter("tempalette-shade") || tempaletteUtilities.getTempaletteCookie("tempalette-shade") || this.bundles[value]["shade"] || this.currentBackgroundShade;
-
 			// Will set the cookie if preview = false
-			this.setBackgroundTheme(bundle["theme"], false, (preview==true));
-			this.setBackgroundType(bundle["type"], false, (preview==true));
-			this.setBackgroundPicture(bundle["picture"], false, (preview==true));
-			this.setBackgroundPattern(bundle["pattern"], false, (preview==true));
-			this.setBackgroundShade(bundle["shade"], false, (preview==true));
+			this.setBackgroundTheme(bundle["theme"], false, (preview==false));
+			this.setBackgroundType(bundle["type"], false, (preview==false));
+			
+			if(bundle["type"] == "picture"){
+				this.setBackgroundPicture(bundle["picture"], false, (preview==false));
+			} else if(bundle["type"] == "pattern"){
+				this.setBackgroundPattern(bundle["pattern"], false, (preview==false));
+			}
+			
+			this.setBackgroundShade(bundle["shade"], false, (preview==false));
 			
 			this.refresh();
 		},
 		loadValuesUrlParameters: function(bundle){
+			
+			// console.log("inside loadValuesUrlParameters, bundle: ");
+			// console.log(bundle);
+			
 			if(bundle == undefined || bundle == null){
 				var bundle = {};
 			}
 			bundle["theme"] = tempaletteUtilities.getURLParameter("tempalette-theme") || bundle["theme"] || null;
 			bundle["type"] = tempaletteUtilities.getURLParameter("tempalette-type") || bundle["type"] || null;
-			bundle["picture"] = tempaletteUtilities.getURLParameter("tempalette-picture") || bundle["picture"] || null;
-			bundle["pattern"] = tempaletteUtilities.getURLParameter("tempalette-pattern") || bundle["pattern"] || null;
+			
+			if(bundle["type"] == "picture"){
+				bundle["picture"] = tempaletteUtilities.getURLParameter("tempalette-picture") || bundle["picture"] || null;
+			} else if(bundle["type"] == "pattern"){
+				bundle["pattern"] = tempaletteUtilities.getURLParameter("tempalette-pattern") || bundle["pattern"] || null;
+			}
+			
 			bundle["shade"] = tempaletteUtilities.getURLParameter("tempalette-shade") || bundle["shade"] || null;
 			return bundle;
 		},
 		loadValuesCookie: function(bundle){
+			
+			// console.log("inside loadValuesCookie, bundle: ");
+			// console.log(bundle);
+			
 			if(bundle == undefined || bundle == null){
 				var bundle = {};
 			}
+			
+			// console.log("(((((((((((((())))))))))))))");
+			// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-theme"));
+			// console.log(bundle["theme"]);
+			// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-type"));
+			// console.log(bundle["type"]);
+			// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-picture"));
+			// console.log(bundle["picture"]);
+			// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-pattern"));
+			// console.log(bundle["pattern"]);
+			// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-shade"));
+			// console.log(bundle["shade"]);
+			// console.log("(((((((((((((())))))))))))))");
+			
 			bundle["theme"] = tempaletteUtilities.getTempaletteCookie("tempalette-theme") || bundle["theme"] || null;
 			bundle["type"] = tempaletteUtilities.getTempaletteCookie("tempalette-type") || bundle["type"] || null;
-			bundle["picture"] = tempaletteUtilities.getTempaletteCookie("tempalette-picture") || bundle["picture"] || null;
-			bundle["pattern"] = tempaletteUtilities.getTempaletteCookie("tempalette-pattern") || bundle["pattern"] || null;
+			if(bundle["type"] == "picture"){
+				bundle["picture"] = tempaletteUtilities.getTempaletteCookie("tempalette-picture") || bundle["picture"] || null;
+			} else if(bundle["type"] == "pattern"){
+				bundle["pattern"] = tempaletteUtilities.getTempaletteCookie("tempalette-pattern") || bundle["pattern"] || null;
+			}
 			bundle["shade"] = tempaletteUtilities.getTempaletteCookie("tempalette-shade") || bundle["shade"] || null;
 			return bundle;
 		},
 		setBackgroundTheme: function(value, refresh, setCookie){
+			
+			// console.log("value: " + value);
+			// console.log("refresh: " + refresh);
+			// console.log("setCookie: " + setCookie);
+			
 			this.currentBackgroundTheme = value;
 			
 			// Setting the value to cookie if setCookie is true
 			if(setCookie == true || setCookie == "true" || setCookie == "t" || setCookie == "T" || setCookie == 1 || setCookie == "1" ){
-				tempaletteUtilities.setTempaletteCookie("tempalette-theme", value);
+				// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-theme") + " changed to " + value);
+				if(value){tempaletteUtilities.setTempaletteCookie("tempalette-theme", value);}
 			}
 			
 			// Refreshing if required
@@ -201,7 +236,8 @@ tempalette = {
 			
 			// Setting the value to cookie if setCookie is true
 			if(setCookie == true || setCookie == "true" || setCookie == "t" || setCookie == "T" || setCookie == 1 || setCookie == "1" ){
-				tempaletteUtilities.setTempaletteCookie("tempalette-type", value);
+				// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-type") + " changed to " + value);
+				if(value){tempaletteUtilities.setTempaletteCookie("tempalette-type", value);}
 			}
 			
 			// Refreshing if required
@@ -214,7 +250,8 @@ tempalette = {
 			
 			// Setting the value to cookie if setCookie is true
 			if(setCookie == true || setCookie == "true" || setCookie == "t" || setCookie == "T" || setCookie == 1 || setCookie == "1" ){
-				tempaletteUtilities.setTempaletteCookie("tempalette-picture", value);
+				// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-picture") + " changed to " + value);
+				if(value){tempaletteUtilities.setTempaletteCookie("tempalette-picture", value);}
 			}
 			
 			// Refreshing if required
@@ -227,7 +264,8 @@ tempalette = {
 			
 			// Setting the value to cookie if setCookie is true
 			if(setCookie == true || setCookie == "true" || setCookie == "t" || setCookie == "T" || setCookie == 1 || setCookie == "1" ){
-				tempaletteUtilities.setTempaletteCookie("tempalette-pattern", value);
+				// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-pattern") + " changed to " + value);
+				if(value){tempaletteUtilities.setTempaletteCookie("tempalette-pattern", value);}
 			}
 			
 			// Refreshing if required
@@ -240,7 +278,8 @@ tempalette = {
 			
 			// Setting the value to cookie if setCookie is true
 			if(setCookie == true || setCookie == "true" || setCookie == "t" || setCookie == "T" || setCookie == 1 || setCookie == "1" ){
-				tempaletteUtilities.setTempaletteCookie("tempalette-shade", value);
+				// console.log(tempaletteUtilities.getTempaletteCookie("tempalette-shade") + " changed to " + value);
+				if(value){tempaletteUtilities.setTempaletteCookie("tempalette-shade", value);}
 			}
 			
 			// Refreshing if required
