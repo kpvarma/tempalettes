@@ -71,14 +71,29 @@ tempaletteRenderer = {
 	getThemeDisplayName: function(theme, type, shade, pattern, picture){
 		var displayName = "";
 		if(type=="pattern"){
-			displayName = tempaletteUtilities.capitalize(shade.replace(/-/gi, " ")) + " with " + tempaletteUtilities.capitalize(pattern.replace(/-/gi, " "));
+			if(shade){
+				var shade = shade.replace(/-/gi, " ");
+			} else {
+				shade = "";
+			}
+			if(pattern){
+				var pattern = pattern.replace(/-/gi, " ");
+			} else {
+				pattern = "";
+			}
+			displayName = tempaletteUtilities.capitalize(shade) + " with " + tempaletteUtilities.capitalize(pattern);
 		} else {
-			displayName = tempaletteUtilities.capitalize(picture.replace(/-/gi, " "));			
+			if(picture){
+				var picture = picture.replace(/-/gi, " ");
+			} else {
+				picture = "";
+			}
+			displayName = tempaletteUtilities.capitalize(picture);			
 		}
 		return displayName;
 	},
 	
-	createThumbnailContent: function(theme, type, shade, pattern, picture){
+	createThumbnailContent: function(bundleName){
 		// <div class="span3 palette-inner margin-bottom-10 padding-top-10" style="border:none;">
 		// 	<img alt="E" data-theme="a" data-type="b" data-shade="c" data-pattern="d" data-picture="e">
 		// 	<div class="margin-10">
@@ -91,12 +106,30 @@ tempaletteRenderer = {
 		var thumbnailSpanHolder = this.createAnElement('div', {"class":"span4", "style":"margin-left:0px;"});
 		var thumbnailDiv = this.createAnElement('div', {"id": "backdrop-preview-01", "class":"thumbnail margin-5"});
 		var themeDisplayName = this.getThemeDisplayName(theme, type, shade, pattern, picture);
+		
+		// Load the values from the bundle (cloning using jquery.extend)
+		var bundle = jQuery.extend(true, {}, tempalette.bundles[bundleName]);
+		var theme = bundle["theme"];
+		var type = bundle["type"];
+		var shade = bundle["shade"];
+		var pattern = bundle["pattern"];
+		var picture = bundle["picture"];
+		
+		// console.log("bundle: ");
+		// 	console.log(bundle);
+		// 	
+		// 	console.log("theme: " + theme);
+		// 	console.log("type: " + type);
+		// 	console.log("shade: " + shade);
+		// 	console.log("pattern: " + pattern);
+		// 	console.log("picture: " + picture);
+		
 		if(themeDisplayName.length > 16){
 			themeDisplayName = themeDisplayName.slice(0,16) + " ..";
 		}
 		if(type == "picture"){
 			var thumbnailImageSource = tempalette.thumbnailImageSourceFolder + "/thumb-" + picture + ".jpg";
-			var thumbnailImage = this.createAnElement('img', {"src":thumbnailImageSource, "alt":themeDisplayName, "data-theme":theme, "data-type":type, "data-shade":shade, "data-pattern":pattern, "data-picture":picture});
+			var thumbnailImage = this.createAnElement('img', {"src":thumbnailImageSource, "alt":themeDisplayName, "data-bundle":bundleName});
 			$(thumbnailDiv).append(thumbnailImage);
 		} else {
 			preview_pattern_class = "backdrop-pattern-preview-" + pattern + " backdrop-shade-preview-" + shade;
@@ -108,7 +141,7 @@ tempaletteRenderer = {
 		$(thumbnailInner).append(this.createAnElement('div', {"class":"cl"}));
 		$(thumbnailInner).append(this.createAnElement('a', {"class":"title"}, themeDisplayName));
 		$(thumbnailInner).append(this.createAnElement('div', {"class":"cl-10"}));
-		$(thumbnailInner).append(this.createAnElement('a', {"href": "javascript:void(0);", "class":"select-theme btn btn-mini btn-special btn-block escape-color", "data-theme":theme, "data-type":type, "data-shade":shade, "data-pattern":pattern, "data-picture":picture}, "Load this Theme"));
+		$(thumbnailInner).append(this.createAnElement('a', {"href": "javascript:void(0);", "class":"select-theme btn btn-mini btn-special btn-block escape-color", "data-bundle":bundleName}, "Load this Theme"));
 		$(thumbnailInner).append(this.createAnElement('div', {"class":"cl"}));
 		$(thumbnailDiv).append(thumbnailInner);
 		$(thumbnailSpanHolder).append(thumbnailDiv);
@@ -122,12 +155,7 @@ tempaletteRenderer = {
 		var bundlesFluidHolder = this.createAnElement('div', {"class":"row-fluid"});
 		
 		jQuery.each(tempalette.bundles, function(name, value) {
-			var theme = value["theme"];
-			var type = value["pattern"] == undefined ? "picture" : "pattern";
-			var shade = value["shade"];
-			var pattern = value["pattern"];
-			var picture = value["picture"];
-			var thumbnail = tempaletteRenderer.createThumbnailContent(theme, type, shade, pattern, picture);
+			var thumbnail = tempaletteRenderer.createThumbnailContent(name);
 			bundlesFluidHolder.append(thumbnail);
 		});
 		bundlesGallery.append(bundlesFluidHolder);
